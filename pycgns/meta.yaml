@@ -1,0 +1,49 @@
+package:
+  name: pycgns
+  version: "576"
+
+source:
+  path: ../pyCGNS-576
+
+build:
+  number: 0
+
+requirements:
+  build:
+   - python
+   - scons
+   - hdf5
+   - chlone
+   - numpy
+   - cython
+   - sphinx
+   - qt
+   - qtpy
+   - pyqt
+   - vtk
+   - cgns
+
+  run:
+   - python
+   - hdf5
+   - numpy
+   - chlone
+   - qt
+   - qtpy
+   - pyqt
+   - vtk
+
+test:
+  requires:
+    - numpy
+
+  imports:
+    - CGNS.MAP
+    - CGNS.PAT
+    - CGNS.VAL
+
+about:
+  home: pycgns.sourceforge.net
+  license: BSD
+  summary: pyCGNS provide a python interface to CGNS/SIDS datamodel for CGNS end-users and python application developpers
+  

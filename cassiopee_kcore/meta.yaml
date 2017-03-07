@@ -1,0 +1,37 @@
+package:
+  name: cassiopee_kcore
+  version: "2.3"
+
+source:
+  path: ../src/KCore
+
+build:
+  number: 0
+
+requirements:
+  build:
+   - python
+   - scons
+   - hdf5
+   - numpy
+   - cython
+   - cgns
+   - libpng
+
+  run:
+   - python
+   - hdf5
+   - numpy
+
+test:
+  requires:
+    - numpy
+
+  imports:
+    - KCore
+
+about:
+  home: elsa.onera.fr/Cassiopee
+  license: GPLv3
+  summary: Core for *Cassiopee* modules.
+

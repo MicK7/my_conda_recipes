@@ -1,0 +1,42 @@
+package:
+  name: cassiopee_geom
+  version: "2.3"
+
+source:
+  path: ../src/Geom
+
+build:
+  number: 0
+
+requirements:
+  build:
+   - python
+   - scons
+   - hdf5
+   - numpy
+   - cython
+   - cgns
+   - libpng
+   - cassiopee_kcore
+
+  run:
+   - python
+   - hdf5
+   - numpy
+   - cassiopee_kcore
+
+test:
+  requires:
+    - numpy
+    - cassiopee_kcore
+    - cassiopee_converter
+
+  imports:
+    - Geom
+    - Geom.PyTree
+
+about:
+  home: elsa.onera.fr/Cassiopee
+  license: GPLv3
+  summary: Geometry definition for *Cassiopee* modules.
+

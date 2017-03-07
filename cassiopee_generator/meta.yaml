@@ -1,0 +1,44 @@
+package:
+  name: cassiopee_generator
+  version: "2.3"
+
+source:
+  path: ../src/Generator
+
+build:
+  number: 0
+
+requirements:
+  build:
+   - python
+   - scons
+   - hdf5
+   - numpy
+   - cython
+   - cassiopee_kcore
+   - cassiopee_converter
+
+  run:
+   - python
+   - hdf5
+   - numpy
+   - cassiopee_kcore
+   - cassiopee_converter
+   - libpng
+
+test:
+  requires:
+    - numpy
+    - cassiopee_kcore
+    - cassiopee_converter
+    - libpng
+
+  imports:
+    - Generator
+    - Generator.PyTree
+
+about:
+  home: elsa.onera.fr/Cassiopee
+  license: GPLv3
+  summary: Generator for *Cassiopee* modules.
+

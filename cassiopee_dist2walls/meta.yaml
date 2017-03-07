@@ -1,0 +1,43 @@
+package:
+  name: cassiopee_dist2walls
+  version: "2.3"
+
+source:
+  path: ../src/Dist2Walls
+
+build:
+  number: 0
+
+requirements:
+  build:
+   - python
+   - scons
+   - hdf5
+   - numpy
+   - cython
+   - cassiopee_kcore
+   - cassiopee_converter
+
+  run:
+   - python
+   - hdf5
+   - numpy
+   - cassiopee_kcore
+   - cassiopee_converter
+   - libpng
+
+test:
+  requires:
+    - numpy
+    - cassiopee_kcore
+    - cassiopee_converter
+    - libpng
+
+  imports:
+    - Dist2Walls
+
+about:
+  home: elsa.onera.fr/Cassiopee
+  license: GPLv3
+  summary: Compute distance to walls for *Cassiopee* modules.
+

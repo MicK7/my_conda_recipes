@@ -1,0 +1,45 @@
+package:
+  name: cassiopee_distributor2
+  version: "2.3"
+
+source:
+  path: ../src/Distributor2
+
+build:
+  number: 0
+
+requirements:
+  build:
+   - python
+   - scons
+   - hdf5
+   - numpy
+   - cython
+   - cassiopee_kcore
+   - cassiopee_converter
+
+  run:
+   - python
+   - hdf5
+   - numpy
+   - cassiopee_kcore
+   - cassiopee_converter
+   - cassiopee_generator
+   - libpng
+
+test:
+  requires:
+    - numpy
+    - cassiopee_kcore
+    - cassiopee_converter
+    - cassiopee_generator
+    - libpng
+
+  imports:
+    - Distributor2
+
+about:
+  home: elsa.onera.fr/Cassiopee
+  license: GPLv3
+  summary: Distributor for arrays and PyTree of *Cassiopee* modules.
+
