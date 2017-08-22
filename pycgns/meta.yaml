@@ -1,19 +1,19 @@
 package:
   name: pycgns
-  version: "576"
+  version: "570"
 
 source:
-  path: ../pyCGNS-576
+  path: ../../pycgns
 
 build:
   number: 0
+
 
 requirements:
   build:
    - python
    - scons
    - hdf5
-   - chlone
    - numpy
    - cython
    - sphinx
@@ -21,13 +21,11 @@ requirements:
    - qtpy
    - pyqt
    - vtk
-   - cgns
 
   run:
    - python
    - hdf5
    - numpy
-   - chlone
    - qt
    - qtpy
    - pyqt
