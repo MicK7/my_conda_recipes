@@ -12,8 +12,7 @@ build:
 requirements:
   build:
    - python
-   - scons
-   - hdf5
+   - hdf5 1.8.15*
    - numpy
    - cython
    - sphinx
@@ -21,15 +20,17 @@ requirements:
    - qtpy
    - pyqt
    - vtk
+   - future
 
   run:
    - python
-   - hdf5
+   - hdf5 1.8.15*
    - numpy
    - qt
    - qtpy
    - pyqt
    - vtk
+   - future
 
 test:
   requires:
