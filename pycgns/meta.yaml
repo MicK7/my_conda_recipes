@@ -12,7 +12,7 @@ build:
 requirements:
   build:
    - python
-   - hdf5 1.8.15*
+   - hdf5 1.10.4*
    - numpy
    - cython
    - sphinx
@@ -21,10 +21,11 @@ requirements:
    - pyqt
    - vtk
    - future
+   - pkgconfig
 
   run:
    - python
-   - hdf5 1.8.15*
+   - hdf5 1.10.4*
    - numpy
    - qt
    - qtpy
